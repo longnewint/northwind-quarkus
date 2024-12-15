@@ -1,4 +1,4 @@
-package newint.northwind.control;
+package newint.northwind.core;
 
 import io.quarkus.runtime.Quarkus;
 import jakarta.enterprise.context.ApplicationScoped;

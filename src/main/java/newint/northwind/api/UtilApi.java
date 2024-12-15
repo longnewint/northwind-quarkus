@@ -6,7 +6,7 @@ import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
-import newint.northwind.control.UtilController;
+import newint.northwind.core.UtilController;
 
 @Path("/util")
 @Produces(MediaType.APPLICATION_JSON)
