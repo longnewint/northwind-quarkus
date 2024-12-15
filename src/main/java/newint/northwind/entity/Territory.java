@@ -26,7 +26,7 @@ public class Territory {
     cascade = CascadeType.ALL,
     orphanRemoval = true
   )
-  List<EmployeeTerritory> employeeTerritories = new ArrayList<>();
+  private List<EmployeeTerritory> employeeTerritories = new ArrayList<>();
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(

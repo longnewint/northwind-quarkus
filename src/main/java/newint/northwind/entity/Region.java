@@ -23,7 +23,7 @@ public class Region {
         cascade = CascadeType.ALL,
         orphanRemoval = true
   )
-  List<Territory> territories = new ArrayList<>();
+  private List<Territory> territories = new ArrayList<>();
 
   @Column(name = "region_description", columnDefinition = "bpchar")
   private String description;

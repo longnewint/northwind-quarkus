@@ -22,7 +22,7 @@ public class Supplier {
     cascade = CascadeType.ALL,
     orphanRemoval = true
   )
-  List<Product> products;
+  private List<Product> products;
 
   private String company_name;
 

@@ -22,7 +22,7 @@ public class Category {
     cascade = CascadeType.ALL,
     orphanRemoval = true
   )
-  List<Product> products;
+  private List<Product> products;
 
   @NotNull
   @Column(name = "category_name")

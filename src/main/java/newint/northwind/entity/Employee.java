@@ -31,7 +31,7 @@ public class Employee {
     cascade = CascadeType.ALL,
     orphanRemoval = true
   )
-  List<EmployeeTerritory> employeeTerritories = new ArrayList<>();
+  private List<EmployeeTerritory> employeeTerritories = new ArrayList<>();
 
   @NotNull
   private String first_name;
