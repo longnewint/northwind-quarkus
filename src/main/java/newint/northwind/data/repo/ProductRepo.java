@@ -1,6 +1,7 @@
 package newint.northwind.data.repo;
 
 import java.util.List;
+import java.util.Optional;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
@@ -21,10 +22,12 @@ public class ProductRepo {
     
   }
 
-  public Product find(String id) {
-    return em.createQuery(FIND_QUERY, Product.class)
+  public Optional<Product> find(String id) {
+    var prod = em.createQuery(FIND_QUERY, Product.class)
       .setParameter("id", id)
       .getSingleResult();
+
+    return Optional.ofNullable(prod);
   }
 
   @Transactional

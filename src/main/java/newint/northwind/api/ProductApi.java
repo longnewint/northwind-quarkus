@@ -26,6 +26,6 @@ public class ProductApi {
   @GET
   @Path("/{id}")
   public Product get(String id) {
-    return repo.find(id);
+    return repo.find(id).get();
   }
 }
