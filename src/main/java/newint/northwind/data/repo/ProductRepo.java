@@ -16,9 +16,9 @@ public class ProductRepo {
   private static String FIND_ALL_QUERY = "SELECT p FROM Product p";
 
   public List<Product> find() {
-    List<Product> list = em.createQuery(FIND_ALL_QUERY, Product.class).getResultList();
+    var list = em.createQuery(FIND_ALL_QUERY, Product.class).getResultList();
+
     return list;
-    
   }
 
   public Optional<Product> find(String id) {
