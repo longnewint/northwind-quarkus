@@ -14,7 +14,6 @@ public class ProductRepo {
   @Inject EntityManager em;
   
   private static String FIND_ALL_QUERY = "SELECT p FROM Product p";
-  private static String FIND_QUERY = "SELECT p FROM Product p WHERE p.id = :id";
 
   public List<Product> find() {
     List<Product> list = em.createQuery(FIND_ALL_QUERY, Product.class).getResultList();
@@ -23,9 +22,7 @@ public class ProductRepo {
   }
 
   public Optional<Product> find(String id) {
-    var prod = em.createQuery(FIND_QUERY, Product.class)
-      .setParameter("id", id)
-      .getSingleResult();
+    var prod = em.find(Product.class, id);
 
     return Optional.ofNullable(prod);
   }
