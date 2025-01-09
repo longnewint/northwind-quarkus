@@ -13,10 +13,11 @@ import newint.northwind.entity.Product;
 public class ProductRepo {
   @Inject EntityManager em;
   
-  private static String FIND_ALL_QUERY = "SELECT p FROM Product p";
+  private static String FIND_ALL_QUERY = "SELECT * FROM products";
 
+  @SuppressWarnings("unchecked")
   public List<Product> find() {
-    var list = em.createQuery(FIND_ALL_QUERY, Product.class).getResultList();
+    var list = em.createNativeQuery(FIND_ALL_QUERY, Product.class).getResultList();
 
     return list;
   }
